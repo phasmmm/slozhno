@@ -1,0 +1,42 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+:root .theme_dark {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --main-title-color: #db00ff;
+  --main-title-shadow: #ff0070;
+  --title-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-bg-color: #ff0070;
+  --accent-text-color: #ff0070;
+  --link-color: #ff0070;
+  --hover-border-color: #ff007040;
+}
+
+.theme_dark .header__decor::after,
+.theme_dark .header__decor::before {
+  visibility: visible;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url(../images/cover-image-dark.png);
+    --bg-color: #000028;
+    --main-title-color: #db00ff;
+    --main-title-shadow: #ff0070;
+    --title-color: #000028;
+    --text-color: #f1b2ce;
+    --accent-bg-color: #ff0070;
+    --accent-text-color: #ff0070;
+    --link-color: #ff0070;
+    --hover-border-color: #ff007040;
+  }
+  
+  .header__decor::after,
+  .header__decor::before {
+    visibility: visible;
+  }
+}
